@@ -44,4 +44,11 @@ Retrieve your Git email address
 $ git config user.email
 ```
 ---
- 
+### Repository Initialization
+Start a new Git repository for your project (make sure you are in the top-level folder containing your project)
+```
+$ git init
+```
+Once the command is executed, a `.git` directory is created (run `ls -a` to check it out).
+
+--- 
