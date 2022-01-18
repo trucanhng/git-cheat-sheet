@@ -240,3 +240,30 @@ $ git stash clear
 ```
 
 ---
+### Restoring, Resetting, and Reverting
+Restore a file's content to what it looked like in the last commit (all changes made to this file since the last commit are discarded)
+```
+$ git restore <file-name>
+```
+
+Restore a file's content to what it looked like in the specified commit.  You can reference a commit by using its hash or using the HEAD reference.
+```
+$ git restore --source <commit-hash> <file-name>
+```
+
+Reset the repository to a specific commit.  All commits made after the specified commit are removed, but the changes in those commits are still in your working directory.
+```
+$ git reset <commit-hash>
+```
+
+Reset the repository to a specific commit.  All commits made after the specified commit and the changes in those commits are removed.
+```
+$ git reset --hard <commit-hash>
+```
+
+Reset the repository to what it looked in the specified commit (same as `git reset`), but by creating a new commit that records the reverting (the tip of the branch is moved forwards) instead of by removing unwanted commits (the tip of the branch is moved backwards) (different from `git reset`).
+```
+$ git revert <commit-hash>
+```
+
+---
