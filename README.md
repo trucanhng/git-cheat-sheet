@@ -199,3 +199,44 @@ $ git diff HEAD <file-name>
 ```
 
 ---
+### Stashing
+Save all the uncommitted changes (both unstaged and staged) and revert the working directory to where it was before these changes were made
+```
+$ git stash
+```
+or
+```
+$ git stash save
+```
+
+Remove the most recently created stash from the stash list and apply it on top of the current working directory
+```
+$ git stash pop
+```
+
+Apply the most recently created stash on top of the current working directory, but without removing the stash from the stash list.  This command is useful if you want to apply the same stash to multiple branches.
+```
+$ git stash apply
+```
+
+Apply a specific stash with the given stash name on top of the current working directory.  Stashes are named following the useful reflog (reference log) syntax with stash@{0} specifying the most recently created stash, stash@{1} specifying the stash created before stash@{0}, and so on.
+```
+$ git stash apply <stash-name>
+```
+
+Show the stash list
+```
+$ git stash list
+```
+
+Delete a stash
+```
+$ git stash drop <stash-name>
+```
+
+Remove all stashes
+```
+$ git stash clear
+```
+
+---
