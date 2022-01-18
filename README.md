@@ -158,3 +158,44 @@ $ git merge <branch-name>
 ```
 
 ---
+### Comparing Changes
+Show changes between two branches
+```
+$ git diff <branch-1>..<branch-2>
+```
+
+Show changes between two commits
+```
+$ git diff <commit-hash-1>..<commit-hash-2>
+```
+
+Show all unstaged changes (show the content differences between the working directory and the index)
+```
+$ git diff
+```
+
+Show all staged changes (show the content differences between the last commit and the index)
+```
+$ git diff --staged
+```
+or
+```
+$ git diff --cached
+```
+
+Show staged changes within a file
+```
+$ git diff --staged <file-name>
+```
+
+Show all unstaged and staged changes since the last commit
+```
+$ git diff HEAD
+```
+
+Show unstaged and staged changes within a file
+```
+$ git diff HEAD <file-name>
+```
+
+---
