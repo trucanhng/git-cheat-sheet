@@ -106,3 +106,55 @@ Print commit logs
   ```
 
 ---
+### Branching and Merging
+List the existing branches in your repository.  The `*` in front of the branch name indicates the branch you are currently on.
+```
+$ git branch
+```
+
+Create a new branch (but not switching to that branch)
+```
+$ git branch <branch-name>
+```
+
+Delete a branch.  Note that you cannot delete the branch you are currently on.
+```
+$ git branch -d <branch-name>
+```
+
+Force delete a branch regardless of its merged status or whether it points to a valid commit
+```
+$ git branch -D <branch-name>
+```
+
+Rename the branch that you are currently on
+```
+$ git branch -m <new-branch-name>
+```
+
+Force rename the branch even the new branch name already exists
+```
+$ git branch -M <new-branch-name>
+```
+
+Switch to another branch
+```
+$ git switch <branch-name>
+```
+
+Another way of switching branches
+```
+$ git checkout <branch-name>
+```
+
+Create a new branch and switch to it at the same time
+```
+$ git switch -c <branch-name>
+```
+
+Merge the changes from one branch into another branch.  The receiving branch is the branch that you are currently on (HEAD points to this branch reference).  So before merging, make sure you run either `git switch` or `git checkout` to switch to the branch into which you want to incorporate the changes.
+```
+$ git merge <branch-name>
+```
+
+---
