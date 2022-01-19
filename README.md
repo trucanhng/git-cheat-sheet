@@ -267,3 +267,71 @@ $ git revert <commit-hash>
 ```
 
 ---
+### Working With Remotes
+Clone a remote repository hosted on a Git repo hosting platform such as Github
+```
+$ git clone <remote-repo-url>
+```
+
+List all existing remotes associated with your local repository
+```
+$ git remote -v
+```
+
+Add a new remote for your local repository: <remote-name> is the label you give to this remote.
+```
+$ git remote add <remote-name> <remote-url>
+```
+
+Rename a remote
+```
+$ git remote rename <old-name> <new-name>
+```
+
+Remove a remote
+```
+$ git remote remove <remote-name>
+```
+
+Push your work in a branch up to a remote
+
++ Push to the same remote branch
+  ```
+   $ git push <remote-name> <branch-name>
+  ```
++ Push to a different remote branch
+  ```
+   $ git push <remote-name> <local-branch-name>:<remote-branch-name>
+  ```
+
+Set the upstream of a local branch (establish a connection between your local branch and the remote's branch of the same name so that whenever you want to push your changes in the local branch up to the remote's, you only need to run `git push`.
+```
+$ git push -u <remote-name> <branch-name>
+```
+
+List all remote branches
+```
+$ git branch -r
+```
+
+Get changes from a remote repository without incorporating those changes into the working directory
+
++ From the default `origin` remote
+  ```
+   $ git fetch
+  ```
++ From any remote
+  ```
+   $ git fetch <remote-name>
+  ```
++ From a specific branch
+  ```
+   $ git fetch <remote-name> <remote-branch-name>
+  ```
+
+Get changes from a remote repository and incorporating those changes into the working directory.  Make sure you are on the branch into which you want the changes to be merged.
+```
+$ git pull <remote-name> <remote-branch-name>
+```
+
+---
