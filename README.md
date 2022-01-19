@@ -158,6 +158,18 @@ $ git merge <branch-name>
 ```
 
 ---
+### Rebasing
+Rebase the branch you are currently on (branch-1) onto the specified branch (branch-2):  create a new commit for each branch-1's commit, and apply these commits at the tip of branch-2 (the commit history is re-written).
+```
+$ git rebase <branch-2-name>
+```
+
+Clean up the commit history in interactive rebase mode
+```
+$ git rebase -i
+```
+
+---
 ### Comparing Changes
 Show changes between two branches
 ```
