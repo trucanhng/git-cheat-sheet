@@ -170,6 +170,36 @@ $ git rebase -i
 ```
 
 ---
+### Tagging
+List existing tags
+```
+$ git tag
+```
+
+Create a lightweight tag for the most recent commit
+```
+$ git tag <tag-name>
+```
+
+Create an annotated tag for the most recent commit
+```
+$ git tag -a <tag-name>
+```
+
+Tag the specified commit
+```
+$ git tag <tag-name> <commit-hash>
+```
+```
+$ git tag -a <tag-name> <commit-hash>
+```
+
+Display the meta data of a tag
+```
+$ git show <tag-name>
+```
+
+---
 ### Comparing Changes
 Show changes between two branches
 ```
