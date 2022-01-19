@@ -70,7 +70,7 @@ Show the working directory status
 $ git status
 ```
 
-Take a snapshot of the content of your working directory to prepare for the next commit. In other words, add the changes that have been made since your last commit to the index or staging area
+Take a snapshot of the content of your working directory to prepare for the next commit. In other words, add the changes that have made since your last commit to the index or staging area
 + Stage one or multiple new or modified files
   ```
    $ git add <file1_name> <file2_name> ...
